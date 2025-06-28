@@ -137,13 +137,16 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# Configuration for drf to use jwt authentication
+# Configuration for drf to use jwt for authentication, and swagger
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
   
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
+
    
 }
 
